@@ -101,20 +101,23 @@ public class TimeKeeper {
                 s.nextLine();
                 switch (ongoing)
                 {
-                    case 1:
+                    case 1: {
                         System.out.println(lab1.toString());
                         System.out.println(lab2.toString());
                         System.out.println(lab3.toString());
                         break;
-                    case 2:
+                    }
+                    case 2: {
                         System.out.println(
                                 labM.listAvailableLabs());
                         break;
-                    case 3:
+                    }
+                    case 3: {
                         System.out.println(
                                 labM.listReservedLabs());
                         break;
-                    case 4:
+                    }
+                    case 4: {
                         String newLoc;
                         String newTime;
                         String newName;
@@ -128,9 +131,10 @@ public class TimeKeeper {
                         System.out.println(reservationEnrollmentPrompt);
                         newEnroll = s.nextInt();
                         s.nextLine();
-                        System.out.println(labM.addReservation(newLoc,newTime, newName, newEnroll));
+                        System.out.println(labM.addReservation(newLoc, newTime, newName, newEnroll));
                         break;
-                    case 5:
+                    }
+                    case 5: {
                         String remLoc;
                         String remTime;
                         System.out.println(labLocationPrompt);
@@ -139,7 +143,8 @@ public class TimeKeeper {
                         remTime = s.nextLine();
                         System.out.println(labM.removeReservation(remLoc, remTime));
                         break;
-                    case 6:
+                    }
+                    case 6: {
                         String modLoc;
                         String modTime;
                         String modName;
@@ -153,17 +158,16 @@ public class TimeKeeper {
                         System.out.println(reservationEnrollmentUpdate);
                         modEnroll = s.nextInt();
                         s.nextLine();
-                        System.out.println(labM.modifyReservation(modLoc,modTime, modName, modEnroll));
+                        System.out.println(labM.modifyReservation(modLoc, modTime, modName, modEnroll));
                         break;
-                    case 7:
+                    }
+                    case 7: {
                         boolean statsC = true;
-                        while (statsC == true)
-                        {
+                        while (statsC == true) {
                             System.out.println(statisticsMenu);
                             int stats = s.nextInt();
                             s.nextLine();
-                            switch (stats)
-                            {
+                            switch (stats) {
                                 case 1:
                                     System.out.println(totalCapacity + labM.calculateTotalCapacity());
                                     break;
@@ -179,11 +183,14 @@ public class TimeKeeper {
                             }
                         }
                         break;
-                    case 8:
+                    }
+                    case 8: {
                         cont = false;
                         break;
-                    default:
+                    }
+                    default: {
                         System.out.println(invalidInput);
+                    }
                 }
             }
             System.out.println(exitMessage);

@@ -36,12 +36,12 @@ public class LabManager
     }
     public double calculateTotalUtilization()
     {
-        double totalU = ((labOne.getMorning().getEnrollment() / labOne.getCapacity() +
-                labOne.getAfternoon().getEnrollment() / labOne.getCapacity() +
-                labTwo.getAfternoon().getEnrollment() / labTwo.getCapacity() +
-                labTwo.getMorning().getEnrollment() / labTwo.getCapacity() +
-                labThree.getMorning().getEnrollment() / labThree.getCapacity() +
-                labThree.getAfternoon().getEnrollment() / labThree.getCapacity()) / 6);
+        double totalU = (((double)labOne.getMorning().getEnrollment() / (double)labOne.getCapacity() +
+                (double)labOne.getAfternoon().getEnrollment() / (double)labOne.getCapacity() +
+                (double)labTwo.getAfternoon().getEnrollment() / (double)labTwo.getCapacity() +
+                (double)labTwo.getMorning().getEnrollment() / (double)labTwo.getCapacity() +
+                (double)labThree.getMorning().getEnrollment() / (double)labThree.getCapacity() +
+                (double)labThree.getAfternoon().getEnrollment() / (double)labThree.getCapacity()) / 6.0);
         return totalU;
     }
     public int calculateAvailableSeats()
